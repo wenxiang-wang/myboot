@@ -1,0 +1,38 @@
+server:
+  port: 9090
+
+spring:
+  mail:
+    # 配置邮件服务器的地址
+    host: smtp.qq.com
+    # 配置邮件服务器的端口（465或587）
+    port: 587
+    # 配置用户的账号
+    username: 3158502039@qq.com
+    # 配置用户的密码（即上面我们申请到的授权码）
+    password: hubfsmdudbfddeai
+    # 发送人昵称
+    nickname: wenxiang
+    # 配置默认编码
+    default-encoding: utf-8
+    # 配置SSL 加密工厂
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          socketFactory:
+            port: 465
+          ssl:
+            enable: true
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        #表示开启 DEBUG 模式，这样，邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true
+
+  thymeleaf:
+    cache: true
+    mode: LEGACYHTML5  # 类型
+    prefix: classpth:/mail/  # 模板存放的位置
+    suffix: .html   # 模板的后缀
+

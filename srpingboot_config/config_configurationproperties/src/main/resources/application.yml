@@ -1,0 +1,8 @@
+server:
+  port: 9090
+
+person:
+  name: "张三"
+  age: 100
+  message: "小明的同学"
+  method: "ConfigurationProperties"
