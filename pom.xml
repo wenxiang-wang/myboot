@@ -10,6 +10,11 @@
         <module>springboot_log</module>
         <module>springboot_log/log_logback</module>
         <module>springboot_log/log_log4j2</module>
+        <module>springboot_base</module>
+        <module>springboot_mq</module>
+        <module>springboot_mq</module>
+        <module>springboot_timedtask</module>
+        <module>springboot_db</module>
     </modules>
 
     <!-- parent指明继承关系，给出被继承的父项目的具体信息-->
