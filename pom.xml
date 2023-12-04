@@ -15,6 +15,7 @@
         <module>springboot_mq</module>
         <module>springboot_timedtask</module>
         <module>springboot_db</module>
+        <module>springboot_javaproperty</module>
     </modules>
 
     <!-- parent指明继承关系，给出被继承的父项目的具体信息-->
