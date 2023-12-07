@@ -16,6 +16,7 @@
         <module>mysql_alone</module>
         <module>mysql_druid</module>
         <module>multiple_sources</module>
+        <module>mysql_mybatisplus</module>
     </modules>
 
     <properties>
