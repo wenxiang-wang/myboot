@@ -12,12 +12,33 @@
 
     <name>db_mysql</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>mysql_alone</module>
+        <module>mysql_druid</module>
+        <module>multiple_sources</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.27</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
+            <type>pom</type>
+        </dependency>
 
     </dependencies>
 </project>

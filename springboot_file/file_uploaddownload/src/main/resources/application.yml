@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB # 最⼤⽀持⽂件⼤⼩
+      max-request-size: 500MB # 最⼤⽀持请求⼤⼩
+      enabled: true  # 是否⽀持 multipart 上传⽂件
+      file-size-threshold: 0 # ⽀持⽂件写⼊磁盘
+      location: D:\idea\ideaspace\myboot\springboot_file\file_uploaddownload\uploads # 上传⽂件的临时⽬录
+      resolve-lazily: false #是否⽀持 multipart 上传⽂件时懒加载
+
+logging:
+  config: classpath:spring-log4j2.xml

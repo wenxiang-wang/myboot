@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    host:
+      jdbc-url: jdbc:mysql://123.56.25.119:3306/test_host?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: Wang123456@
+
+    docker:
+      jdbc-url: jdbc:mysql://123.56.25.119:3307/test_docker?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
