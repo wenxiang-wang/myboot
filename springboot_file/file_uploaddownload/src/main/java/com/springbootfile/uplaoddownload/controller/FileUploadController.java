@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +28,7 @@ public class FileUploadController {
     @Resource
     private UploadService uploadService;
 
-    @PostMapping("uploadByMultipartFile")
+    @RequestMapping("uploadByMultipartFile")
     public ResponseResult upload(MultipartFile file) {
         String returnString = null;
         try {

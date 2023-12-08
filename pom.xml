@@ -2,7 +2,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <modules>
         <module>springboot_email</module>
         <module>srpingboot_config</module>
@@ -15,6 +14,8 @@
         <module>springboot_javaproperty</module>
         <module>springboot_connector</module>
         <module>springboot_file</module>
+        <module>springboot_security</module>
+        <module>springboot_test</module>
     </modules>
 
     <!-- parent指明继承关系，给出被继承的父项目的具体信息-->
@@ -37,6 +38,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.version>1.0-SNAPSHOT</project.version>
+        <mysql.version>8.0.27</mysql.version>
+        <mybatis.version>3.0.3</mybatis.version>
+        <druid.version>1.2.20</druid.version>
+        <mybatisplus.version>3.5.3.1</mybatisplus.version>
+        <velocity.version>2.3</velocity.version>
+        <feign.version>1.4.7.RELEASE</feign.version>
+        <android.version>0.0.20131108.vaadin1</android.version>
+        <springfox.version>3.0.0</springfox.version>
     </properties>
 
     <dependencyManagement>
@@ -51,61 +60,82 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
-            <!--<dependency>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
-            </dependency>-->
-
+            <dependency>
+                <groupId>org.wwx</groupId>
+                <artifactId>connector_interfacewrapper</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.27</version>
+                <version>${mysql.version}</version>
             </dependency>
 
             <!-- mybatis -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>3.0.3</version>
+                <version>${mybatis.version}</version>
             </dependency>
 
             <!-- 数据库连接池druid-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>1.2.20</version>
+                <version>${druid.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.2.18</version>
+                <version>${druid.version}</version>
             </dependency>
 
             <!-- mybatis-Plus-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.3.1</version>
+                <version>${mybatisplus.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
+            <!-- -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
-                <version>3.5.3.1</version>
+                <version>${mybatisplus.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
+            <!--  -->
             <dependency>
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
-                <version>2.3</version>
+                <version>${velocity.version}</version>
             </dependency>
+
+            <!-- json数据和java数据转换-->
+            <dependency>
+                <groupId>com.vaadin.external.google</groupId>
+                <artifactId>android-json</artifactId>
+                <version>${android.version}</version>
+
+            </dependency>
+
+            <!-- 调用外部接口 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+
+            <!-- 接口文档 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
 
         </dependencies>
 

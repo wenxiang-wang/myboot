@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+logging:
+  config: classpath:spring-log4j2.xml
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java #重启目录
+      exclude: application.yml
+

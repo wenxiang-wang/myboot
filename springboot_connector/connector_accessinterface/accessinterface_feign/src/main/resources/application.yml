@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+logging:
+  config: classpath:spring-log4j2.xml
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java #重启目录
+      exclude: application.yml,static/**,public/**, WEB-INF/**
+  thymeleaf:
+    cache: false #使用Thymeleaf模板引擎，关闭缓存
+
+localUrl: http://10.10.10.46:9090/hello
